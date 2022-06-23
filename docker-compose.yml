@@ -1,0 +1,20 @@
+version: "3"
+services: 
+  whdbx:
+    container_name: whdbx_web
+    build: .      
+    restart: unless-stopped
+    networks:
+      - web #- Used with Traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.services.whdbx.loadbalancer.server.port=80"
+      - "traefik.http.routers.whdbx.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.whdbx.entrypoints=web"
+      - "traefik.http.routers.whdbx-secure.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.whdbx-secure.entrypoints=websecure"
+      - "traefik.http.routers.whdbx-secure.tls.certresolver=myresolver"
+networks:
+  web:
+    external: true # Used with Traefik to expose services to the web with SSL.

@@ -1,8 +1,17 @@
 # whdbx_web
 Wormhole database as pure python app and using newer EVE API (ESI).
 
-Hosted at https://eve-wh.space
+~~Hosted at https://eve-wh.space~~
 
+## Update 2022
+Added docker support with traefik
+
+.env file required with
+```
+DOMAIN=
+```
+
+Credit for Dockerfile and entrypoint\.sh to `sergelevin`s fork
 
 ## Requirements: Python interpreter
 * Python >= 3.5 with sqlite DB support (maybe will work with 3.4)
