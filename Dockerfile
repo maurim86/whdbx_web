@@ -29,6 +29,9 @@ RUN pip install --no-cache /wheels/* && \
 
 COPY . ./
 
+RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /app/sqlite_sql/update_database.sh
+
 VOLUME ["/app/_caches", "/app/logs", "/app/db"]
 
 ENTRYPOINT ["/app/entrypoint.sh"]
