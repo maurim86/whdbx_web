@@ -2,7 +2,7 @@ version: "3"
 services: 
   whdbx:
     container_name: whdbx_web
-    build: .      
+    build: .
     restart: unless-stopped
     networks:
       - web #- Used with Traefik

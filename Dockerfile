@@ -27,9 +27,8 @@ RUN pip install --no-cache /wheels/* && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir _caches
 
-COPY . . 
+COPY . ./
 
-EXPOSE 80
 VOLUME ["/app/_caches", "/app/logs", "/app/db"]
 
 ENTRYPOINT ["/app/entrypoint.sh"]
