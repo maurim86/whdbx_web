@@ -37,5 +37,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            whoami
-            ls -al
+            cd ${{ secrets.APP_PATH }}
+            pwd
+            ls -l
