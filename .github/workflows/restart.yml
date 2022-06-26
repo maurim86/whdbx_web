@@ -4,12 +4,6 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -22,7 +16,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: SSH into server and pull newest codes
+      - name: SSH into server and restart the docker container
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -30,4 +24,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.APP_PATH }}
-            git pull
+            docker-compose restart
