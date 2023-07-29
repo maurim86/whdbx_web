@@ -13,7 +13,7 @@ INSERT INTO signature_oregas VALUES (56, 'ark:1,bis:1,cro:1,dar:1,gne:1,hed:1,he
 INSERT INTO signature_oregas VALUES (57, 'ark:4,bis:6,cro:2,dar:1,gne:1,hed:6,hem:9,jas:5,ker:7,mer:0,omb:5,pla:5,pyr:5,sco:0,spo:1,vel:6'); -- Uncommon Core Deposit
 INSERT INTO signature_oregas VALUES (58, 'ark:1,bis:1,cro:1,dar:1,gne:1,hed:1,hem:1,jas:1,ker:1,mer:0,omb:1,pla:2,pyr:0,sco:0,spo:1,vel:4'); -- Unexceptional Frontier Deposit
 
--- gas clouds
+-- gas clouds --- doubled the volume
 INSERT INTO signature_oregas VALUES (59, 'c50:12000,c60:6000'); -- Barren Perimeter Reservoir
 INSERT INTO signature_oregas VALUES (60, 'c28:20000,c32:4000'); -- Bountiful Frontier Reservoir
 INSERT INTO signature_oregas VALUES (61, 'c320:24000,c540:2000'); -- Instrumental Core Reservoir
